@@ -20,7 +20,7 @@ class FinalMensageViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createButton()
+//        createButton()
         createLabel()
         createBackground()
     }
