@@ -11,41 +11,29 @@ import UIKit
 
 class FinalMensageViewController: UIViewController{
     
-    var finalLabel = UILabel()
+    var backgroundView = UIImageView()
     var restartButton = UIButton()
-    var text =  """
-                Everybody has a different vision of the world,
-                We need to be careful about what we hear and what we say
-                """
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        createButton()
-        createLabel()
+        createButton()
         createBackground()
     }
     
-    func createLabel(){
-        finalLabel.frame = CGRect(x: self.view.frame.width * 0.1, y: self.view.frame.height * 0.3, width: 800, height: 300)
-        finalLabel.text = text
-        finalLabel.font = UIFont(name: "Arial", size: 30)
-        finalLabel.numberOfLines = 2
-        finalLabel.textAlignment = .center
-        self.view.addSubview(finalLabel)
-    }
-    
     func createButton(){
-        restartButton.backgroundColor = .blue
-        restartButton.setTitle("Menu", for: .normal)
-        restartButton.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        restartButton.setTitleColor(.white, for: .normal)
-        restartButton.frame = CGRect(x: self.view.frame.width * 0.45, y: self.view.frame.height * 0.75, width: 140, height: 100)
+        restartButton.setBackgroundImage(UIImage(named: "botaoMenu"), for: .normal)
+        restartButton.frame = CGRect(x: self.view.frame.width * 0.45, y: self.view.frame.height * 0.75, width: 348, height: 141)
+        restartButton.center.x = self.view.center.x
         restartButton.addTarget(self, action: #selector(startAR), for: .touchUpInside)
         self.view.addSubview(restartButton)
     }
     
     func createBackground(){
-        self.view.backgroundColor = .lightGray
+        let backgroundImage = UIImage(named: "telaFinal")
+        backgroundView = UIImageView(image: backgroundImage)
+        backgroundView.center = self.view.center
+        backgroundView.layer.zPosition = -1
+        self.view.addSubview(backgroundView)
     }
     
     @objc func startAR(){

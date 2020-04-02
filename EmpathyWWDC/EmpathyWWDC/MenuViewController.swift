@@ -12,35 +12,30 @@ import UIKit
 class MenuViewController: UIViewController{
     
     var startButton = UIButton()
-    var sceneTitle = UILabel()
+    var backgroundView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(view.frame)
-        createLabel()
         createButton()
         createBackGround()
     }
     
     func createButton(){
-        startButton.backgroundColor = .blue
-        startButton.setTitle("Start", for: .normal)
-        startButton.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        startButton.setTitleColor(.white, for: .normal)
-        startButton.frame = CGRect(x: self.view.frame.width * 0.5, y: self.view.frame.height * 0.75, width: 140, height: 100)
+        startButton.setBackgroundImage(UIImage(named: "botaoStart"), for: .normal)
+        startButton.frame.size = CGSize(width: 405, height: 157)
+//        startButton.frame = CGRect(x: self.view.frame.width * 0.35, y: self.view.frame.height * 0.75, width: 405, height: 157)
+        startButton.center.x = self.view.center.x
+        startButton.center.y = self.view.frame.height * 0.75
         startButton.addTarget(self, action: #selector(startButtonAction), for: .touchUpInside)
         self.view.addSubview(startButton)
     }
     
-    func createLabel(){
-        sceneTitle.frame = CGRect(x: self.view.frame.width * 0.5, y: self.view.frame.height * 0.25, width: 300, height: 100)
-        sceneTitle.text = "Empathy Eyes"
-        sceneTitle.textAlignment = .center
-        self.view.addSubview(sceneTitle)
-    }
-    
     func createBackGround(){
-        self.view.backgroundColor = .lightGray
+        let backgroundImage = UIImage(named: "telaMenu")
+        backgroundView = UIImageView(image: backgroundImage)
+        backgroundView.center = self.view.center
+        backgroundView.layer.zPosition = -1
+        self.view.addSubview(backgroundView)
     }
     
     @objc func startButtonAction(){

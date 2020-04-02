@@ -46,45 +46,44 @@ class ViewController: UIViewController {
     
     func createARView(){
         print("1")
-        arView = ARView(frame: CGRect(x: 0, y: 0, width: 1024, height: 1366))
+        arView = ARView(frame: CGRect(x: 0, y: 0, width: 835, height: 1024))
+        arView.center = self.view.center
         self.view = arView
         print("2")
     }
     
     func createButtons(){
         print("3")
-        buttonSon.backgroundColor = .blue
-        buttonSon.setTitle("filho", for: .normal)
-        buttonSon.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        buttonSon.setTitleColor(.white, for: .normal)
-        buttonSon.frame = CGRect(x: arView.frame.width * 0.1, y: arView.frame.height * 0.85, width: 140, height: 100)
+        buttonSon.setBackgroundImage(UIImage(named: "botaoSonDes"), for: .normal)
+        buttonSon.setBackgroundImage(UIImage(named: "botaoSonAtivado"), for: .disabled)
+        buttonSon.isEnabled = true
+        buttonSon.frame = CGRect(x: arView.frame.width * 0.355, y: arView.frame.height * 0.7, width: 230, height: 127)
         buttonSon.addTarget(self, action: #selector(buttonSonAction), for: .touchUpInside)
         buttonSon.layer.zPosition = 1
         arView.addSubview(buttonSon)
         
-        buttonFather.backgroundColor = .blue
-        buttonFather.setTitle("pai", for: .normal)
-        buttonFather.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        buttonFather.setTitleColor(.white, for: .normal)
-        buttonFather.frame = CGRect(x: arView.frame.width * 0.3, y: arView.frame.height * 0.85, width: 140, height: 100)
-        buttonFather.addTarget(self, action: #selector(buttonFatherAction), for: .touchUpInside)
-        buttonFather.layer.zPosition = 1
-        arView.addSubview(buttonFather)
         
-        buttonNutro.backgroundColor = .blue
-        buttonNutro.setTitle("neutro", for: .normal)
-        buttonNutro.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        buttonNutro.setTitleColor(.white, for: .normal)
-        buttonNutro.frame = CGRect(x: arView.frame.width * 0.5, y: arView.frame.height * 0.85, width: 140, height: 100)
+        buttonNutro.setBackgroundImage(UIImage(named: "botaoNeutralDes"), for: .normal)
+        buttonNutro.setBackgroundImage(UIImage(named: "botaoNeutralAtivado"), for: .disabled)
+        buttonNutro.isEnabled = false
+        buttonNutro.frame = CGRect(x: arView.frame.width * 0.5, y: arView.frame.height * 0.7, width: 230, height: 127)
+        buttonNutro.center.x = self.arView.center.x
         buttonNutro.addTarget(self, action: #selector(buttonNeutroAction), for: .touchUpInside)
         buttonNutro.layer.zPosition = 1
         arView.addSubview(buttonNutro)
         
-        buttonNext.backgroundColor = .blue
-        buttonNext.setTitle("next", for: .normal)
-        buttonNext.titleLabel?.font = UIFont(name: "Arial", size: 45)
-        buttonNext.setTitleColor(.white, for: .normal)
-        buttonNext.frame = CGRect(x: arView.frame.width * 0.7, y: arView.frame.height * 0.85, width: 140, height: 100)
+        
+        buttonFather.setBackgroundImage(UIImage(named: "botaoFatherDes"), for: .normal)
+        buttonFather.setBackgroundImage(UIImage(named: "botaoFatherAtivado"), for: .disabled)
+        buttonFather.isEnabled = true
+        buttonFather.frame = CGRect(x: arView.frame.width, y: arView.frame.height * 0.7, width: 230, height: 127)
+        buttonFather.addTarget(self, action: #selector(buttonFatherAction), for: .touchUpInside)
+        buttonFather.layer.zPosition = 1
+        arView.addSubview(buttonFather)
+        
+
+        buttonNext.setBackgroundImage(UIImage(named: "botaoNext"), for: .normal)
+        buttonNext.frame = CGRect(x: arView.frame.width * 0.8, y: arView.frame.height * 0.85, width: 402, height: 122)
         buttonNext.addTarget(self, action: #selector(buttonNextAction), for: .touchUpInside)
         buttonNext.layer.zPosition = 1
         arView.addSubview(buttonNext)
@@ -122,15 +121,24 @@ class ViewController: UIViewController {
     
     @objc func buttonSonAction(){
         print("filho")
+        buttonSon.isEnabled = false
+        buttonNutro.isEnabled = true
+        buttonFather.isEnabled = true
         changeWords(notifications: arrayActionsSon)
     }
     
     @objc func buttonFatherAction(){
+        buttonSon.isEnabled = true
+        buttonNutro.isEnabled = true
+        buttonFather.isEnabled = false
         print("pai")
         changeWords(notifications: arrayActionsFather)
     }
     
     @objc func buttonNeutroAction(){
+        buttonSon.isEnabled = true
+        buttonNutro.isEnabled = false
+        buttonFather.isEnabled = true
         print("neutro")
         changeWords(notifications: arrayActionsNeutro)
     }
@@ -138,6 +146,9 @@ class ViewController: UIViewController {
     @objc func buttonNextAction(){
         print("next")
         if actualScene < 6{
+            buttonSon.isEnabled = true
+            buttonNutro.isEnabled = false
+            buttonFather.isEnabled = true
             changeWords(notifications: arrayActionsNext)
             actualScene += 1
         } else{
