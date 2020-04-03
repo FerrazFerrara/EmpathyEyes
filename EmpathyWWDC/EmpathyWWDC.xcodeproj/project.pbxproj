@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0AA86D2437AFC6008E2408 /* ButtonCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AA86C2437AFC6008E2408 /* ButtonCustomAnimation.swift */; };
 		7B232F33242BD55B0014C0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B232F32242BD55B0014C0DB /* AppDelegate.swift */; };
 		7B232F35242BD55B0014C0DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B232F34242BD55B0014C0DB /* ViewController.swift */; };
 		7B232F37242BD55B0014C0DB /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7B232F36242BD55B0014C0DB /* Experience.rcproject */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B0AA86C2437AFC6008E2408 /* ButtonCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomAnimation.swift; sourceTree = "<group>"; };
 		7B232F2F242BD55B0014C0DB /* EmpathyWWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpathyWWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B232F32242BD55B0014C0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B232F34242BD55B0014C0DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				7B232F3B242BD5610014C0DB /* Assets.xcassets */,
 				7B232F3D242BD5610014C0DB /* LaunchScreen.storyboard */,
 				7B232F40242BD5610014C0DB /* Info.plist */,
+				7B0AA86C2437AFC6008E2408 /* ButtonCustomAnimation.swift */,
 			);
 			path = EmpathyWWDC;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B232F35242BD55B0014C0DB /* ViewController.swift in Sources */,
+				7B0AA86D2437AFC6008E2408 /* ButtonCustomAnimation.swift in Sources */,
 				7BDD0F5224326702003519DB /* MenuViewController.swift in Sources */,
 				7BDD0F542432671B003519DB /* FinalMensageViewController.swift in Sources */,
 				7BDD0F5824327146003519DB /* IntroViewController.swift in Sources */,

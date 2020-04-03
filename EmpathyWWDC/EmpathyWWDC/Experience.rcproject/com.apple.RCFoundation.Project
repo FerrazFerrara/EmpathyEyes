@@ -6424,7 +6424,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -6439,9 +6439,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.079999998211860657,
+                              0.40000000596046448,
+                              0.40000000596046448,
                               1
                             ]
                           }
@@ -6583,9 +6583,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                              1,
+                              1,
+                              1,
                               1
                             ]
                           }
@@ -6641,7 +6641,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -6656,9 +6656,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
                           }
@@ -6790,6 +6790,18 @@
                           }
                         ],
                         [
+                          "bubbleMaterialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              1,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ],
+                        [
                           "bubbleType",
                           {
                             "typeName" : "String",
@@ -6807,7 +6819,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -6815,6 +6827,18 @@
                           {
                             "typeName" : "String",
                             "value" : "standard"
+                          }
+                        ],
+                        [
+                          "messageMaterialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
+                              1
+                            ]
                           }
                         ],
                         [
@@ -6940,9 +6964,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                              1,
+                              1,
+                              1,
                               1
                             ]
                           }
@@ -7005,7 +7029,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -7020,9 +7044,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
                           }
@@ -7206,9 +7230,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                              1,
+                              1,
+                              1,
                               1
                             ]
                           }
@@ -7252,7 +7276,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -7267,9 +7291,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
                           }
@@ -7443,7 +7467,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -7458,9 +7482,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.079999998211860657,
+                              0.40000000596046448,
+                              0.40000000596046448,
                               1
                             ]
                           }
@@ -7642,7 +7666,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.70000000000000007
                           }
                         ],
                         [
@@ -7670,7 +7694,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -7854,7 +7878,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.70000000000000007
                           }
                         ],
                         [
@@ -7875,14 +7899,14 @@
                           "message",
                           {
                             "typeName" : "String",
-                            "value" : "But music is what I really love"
+                            "value" : "But music    is what I really love"
                           }
                         ],
                         [
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -7908,7 +7932,7 @@
                           "messageScale",
                           {
                             "typeName" : "Double",
-                            "value" : 0.94280040774402396
+                            "value" : 0.97341281748007968
                           }
                         ],
                         [
@@ -8066,7 +8090,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.70000000000000007
                           }
                         ],
                         [
@@ -8094,7 +8118,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -8286,7 +8310,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -8301,9 +8325,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.079999998211860657,
+                              0.40000000596046448,
+                              0.40000000596046448,
                               1
                             ]
                           }
@@ -8491,7 +8515,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -8506,9 +8530,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.079999998211860657,
+                              0.40000000596046448,
+                              0.40000000596046448,
                               1
                             ]
                           }
@@ -8711,7 +8735,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.69714890438247012
                           }
                         ],
                         [
@@ -8725,7 +8749,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -8836,7 +8860,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -8844,6 +8868,18 @@
                           {
                             "typeName" : "String",
                             "value" : "standard"
+                          }
+                        ],
+                        [
+                          "messageMaterialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              0.10999999940395355,
+                              0.55000001192092896,
+                              0.55000001192092896,
+                              1
+                            ]
                           }
                         ],
                         [
@@ -9018,9 +9054,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                              1,
+                              1,
+                              1,
                               1
                             ]
                           }
@@ -9076,7 +9112,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -9091,9 +9127,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
                           }
@@ -9256,9 +9292,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.93333500623703003,
-                              0.93333500623703003,
-                              0.93333500623703003,
+                              1,
+                              1,
+                              1,
                               1
                             ]
                           }
@@ -9314,7 +9350,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "DINCondensed-Bold"
                           }
                         ],
                         [
@@ -9329,9 +9365,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
                           }
@@ -9533,7 +9569,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.70000000000000007
                           }
                         ],
                         [
@@ -9561,7 +9597,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -9746,7 +9782,7 @@
                           "cornerRoundness",
                           {
                             "typeName" : "Double",
-                            "value" : 1
+                            "value" : 0.70000000000000007
                           }
                         ],
                         [
@@ -9774,7 +9810,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "Futura-Medium"
                           }
                         ],
                         [
@@ -9965,7 +10001,7 @@
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica"
+                            "value" : "ProximaNovaSoftW03-Regular"
                           }
                         ],
                         [
@@ -9980,9 +10016,9 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0,
-                              0,
-                              0,
+                              0.079999998211860657,
+                              0.40000000596046448,
+                              0.40000000596046448,
                               1
                             ]
                           }
@@ -10097,21 +10133,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.99995261430740356,
-                  -1.1641532182693481e-09,
-                  -0.0097291544079780579,
+                  0.99600762128829956,
+                  -6.3329935073852539e-08,
+                  0.089267805218696594,
                   0,
-                  -0.0067967879585921764,
-                  0.71549469232559204,
-                  -0.69858509302139282,
+                  0.04500962421298027,
+                  0.86358213424682617,
+                  -0.50219511985778809,
                   0,
-                  0.0069611198268830776,
-                  0.69861859083175659,
-                  0.71546036005020142,
+                  -0.077090032398700714,
+                  0.5042080283164978,
+                  0.86013448238372803,
                   0,
-                  0.1954779177904129,
-                  2.6434109210968018,
-                  1.4030065536499023,
+                  0.18621125817298889,
+                  2.2383108139038086,
+                  2.2401902675628662,
                   1
                 ],
                 "sceneTransform" : [

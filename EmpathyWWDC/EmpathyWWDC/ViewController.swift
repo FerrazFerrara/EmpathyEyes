@@ -9,38 +9,46 @@
 import UIKit
 import RealityKit
 import SpriteKit
+import ARKit
 
 class ViewController: UIViewController {
     
+    /// ar view for the scene
     var arView: ARView!
+    /// view for create a fake camera filter
     var filterView = UIView()
     
+    /// outlet button for son vision
     var buttonSon = UIButton()
+    /// outlet button for father vision
     var buttonFather = UIButton()
+    /// outlet button for neutral vision
     var buttonNutro = UIButton()
+    /// outlet button for next speech
     var buttonNext = UIButton()
+    /// outlet label for explain
+    var labelChoose = UILabel()
+    /// ar scene anchor
     var boxAnchor: Experience.Box!
     
+    /// array of actions from son
     var arrayActionsSon = [Experience.NotificationTrigger]()
+    /// array of actions from father
     var arrayActionsFather = [Experience.NotificationTrigger]()
+    /// array of actions from neutral
     var arrayActionsNeutro = [Experience.NotificationTrigger]()
+    /// array of actions to pass speech
     var arrayActionsNext = [Experience.NotificationTrigger]()
     
     var actualScene = 1
+    var fatherVisionSeen = false
+    var sonVisionSeen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createARView()
-        filterView = UIView(frame: arView.frame)
-        filterView.layer.zPosition = 0
-        
-        boxAnchor = try! Experience.loadBox()
-        
-        createButtons()
-        createArray()
-        
-        arView.scene.anchors.append(boxAnchor)
+        configAR()
         print("5")
     }
     
@@ -50,6 +58,15 @@ class ViewController: UIViewController {
         arView.center = self.view.center
         self.view = arView
         print("2")
+    }
+    
+    func createLabel(){
+        labelChoose.text = "Choose your vision"
+        labelChoose.frame = CGRect(x: arView.frame.width * 0.5, y: arView.frame.height * 0.61, width: 300, height: 100)
+        labelChoose.center.x = self.view.center.x
+        labelChoose.font = UIFont(name: "Arial", size: 30)
+        labelChoose.textAlignment = .center
+        arView.addSubview(labelChoose)
     }
     
     func createButtons(){
@@ -145,14 +162,18 @@ class ViewController: UIViewController {
     
     @objc func buttonNextAction(){
         print("next")
-        if actualScene < 6{
-            buttonSon.isEnabled = true
-            buttonNutro.isEnabled = false
-            buttonFather.isEnabled = true
-            changeWords(notifications: arrayActionsNext)
-            actualScene += 1
-        } else{
-            passToFinalScreen()
+        if sonVisionSeen && fatherVisionSeen{
+            if actualScene < 6{
+                buttonSon.isEnabled = true
+                buttonNutro.isEnabled = false
+                buttonFather.isEnabled = true
+                changeWords(notifications: arrayActionsNext)
+                actualScene += 1
+            } else{
+                passToFinalScreen()
+            }
+        } else {
+            buttonNext.shake()
         }
     }
     
@@ -164,5 +185,37 @@ class ViewController: UIViewController {
         let nextViewController = FinalMensageViewController()
         nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated: true, completion: nil)
+    }
+    
+    func configAR(){
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        arView.session.run(config, options: [])
+        
+        coachConfig()
+    }
+}
+
+extension ViewController: ARCoachingOverlayViewDelegate{
+    func coachConfig(){
+        let coaching = ARCoachingOverlayView()
+        coaching.delegate = self
+        coaching.session = self.arView.session
+        coaching.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        coaching.goal = .horizontalPlane
+        coaching.frame.origin.y = self.view.bounds.height/2
+        coaching.frame.origin.x = self.view.bounds.width/2
+        
+        self.arView.addSubview(coaching)
+    }
+    
+    func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        coachingOverlayView.activatesAutomatically = false
+        boxAnchor = try! Experience.loadBox()
+        arView.scene.anchors.append(boxAnchor)
+        
+        createLabel()
+        createButtons()
+        createArray()
     }
 }
