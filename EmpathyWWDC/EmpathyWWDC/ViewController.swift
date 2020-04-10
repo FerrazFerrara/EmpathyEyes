@@ -8,7 +8,6 @@
 
 import UIKit
 import RealityKit
-import SpriteKit
 import ARKit
 
 class ViewController: UIViewController {

@@ -34,6 +34,7 @@ class MenuViewController: UIViewController{
         let backgroundImage = UIImage(named: "telaMenu")
         backgroundView = UIImageView(image: backgroundImage)
         backgroundView.center = self.view.center
+//        backgroundView.layer.position
         backgroundView.layer.zPosition = -1
         self.view.addSubview(backgroundView)
     }
